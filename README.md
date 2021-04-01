@@ -1,4 +1,5 @@
-# README
+# Finance planner
+[![Rspec](https://github.com/DenisKem/finance_planner/actions/workflows/ruby.yml/badge.svg)](https://github.com/DenisKem/finance_planner/actions/workflows/ruby.yml)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
