@@ -1,3 +1,3 @@
 <%= month_calendar do |date| %>
-  <%= date %>
+  <%= link_to date, day_path(date.year, date.month, date.day) %>
 <% end %>
