@@ -1,0 +1,8 @@
+<div class="columns">
+  <div class="column is-three-quarters">
+    <%= month_calendar do |date| %>
+      <%= link_to date.day, day_path(date.year, date.month, date.day) %>
+    <% end %>
+  </div>
+</div>
+
