@@ -16,8 +16,9 @@ ActiveRecord::Schema.define(version: 2021_04_07_222309) do
   enable_extension "plpgsql"
 
   create_table "targets", force: :cascade do |t|
-    t.string "name"
-    t.date "due_at"
+    t.string "name", null: false
+    t.decimal "amount", null: false
+    t.date "due_at", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

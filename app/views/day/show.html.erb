@@ -1,1 +1,31 @@
-Today is: <%= @day %>
+<div class="content">
+  <p class="is-size-2"><%= @day %></p>
+</div>
+
+<% if @targets.present? %>
+  <div class="content">
+    <p class="is-size-3">
+      Targets
+    </p>
+  </div>
+
+  <table class="table is-striped is-fullwidth">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Amount</th>
+        <th>Due</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @targets.each do |target| %>
+        <tr>
+          <td><%= target.name %></td>
+          <td><%= target.amount %></td>
+          <td><%= target.due_at %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
