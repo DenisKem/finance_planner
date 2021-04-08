@@ -11,7 +11,23 @@
     </div>
   <% end %>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="field">
+    <label for="name" class="label">Name</label>
+    <div class="control">
+      <%= form.text_field :name, class: 'input' %>
+    </div>
+  </div>
+
+  <div class="field">
+    <label for="due_at" class="label">Due at</label>
+    <div class="control">
+      <%= form.date_field :due_at, class: 'input' %>
+    </div>
+  </div>
+
+  <div class="field">
+    <p class="control">
+      <%= form.submit class: 'button is-primary' %>
+    </p>
   </div>
 <% end %>

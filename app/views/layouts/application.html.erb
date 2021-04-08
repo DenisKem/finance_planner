@@ -26,7 +26,16 @@
 
               <li>
                 <%= link_to "Targets", targets_path,
-                            class: ('is-active' if controller_name == 'ResourcesController') %>
+                            class: ('is-active' if ('is-active' if current_page?(targets_path))) %>
+
+                <% if controller_name == 'targets' %>
+                  <ul>
+                    <li>
+                      <%= link_to 'New Target', new_target_path,
+                                  class: ('is-active' if ('is-active' if current_page?(new_target_path)))%>
+                    </li>
+                  </ul>
+                <% end %>
               </li>
             </ul>
           </aside>
