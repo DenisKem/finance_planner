@@ -13,7 +13,28 @@
   <body>
     <section class="section">
       <div class="container">
-        <%= yield %>
+        <div class="columns">
+          <aside class="menu column is-one-quarter">
+            <p class="menu-label">
+              General
+            </p>
+
+            <ul class="menu-list">
+              <li>
+                <%= link_to "Home", root_path, class: ('is-active' if current_page?(root_path)) %>
+              </li>
+
+              <li>
+                <%= link_to "Targets", targets_path,
+                            class: ('is-active' if controller_name == 'ResourcesController') %>
+              </li>
+            </ul>
+          </aside>
+
+          <div class="column is-three-quarters">
+            <%= yield %>
+          </div>
+        </div>
       </div>
     </section>
   </body>
