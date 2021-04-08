@@ -64,6 +64,6 @@ class TargetsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def target_params
-      params.fetch(:target, {})
+      params.fetch(:target).permit(:name, :amount, :due_at)
     end
 end

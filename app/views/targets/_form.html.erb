@@ -19,6 +19,13 @@
   </div>
 
   <div class="field">
+    <label for="amount" class="label">Amount</label>
+    <div class="control">
+      <%= form.number_field :amount, class: 'input' %>
+    </div>
+  </div>
+
+  <div class="field">
     <label for="due_at" class="label">Due at</label>
     <div class="control">
       <%= form.date_field :due_at, class: 'input' %>
